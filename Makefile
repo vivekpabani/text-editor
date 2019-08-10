@@ -1,2 +1,9 @@
-kilo: kilo.c
-    $(CC) kilo.c -o kilo -Wall -Wextra -pedantic -std=c99
+TARGET = kilo
+
+$(TARGET): $(TARGET).c
+    $(CC) $(TARGET).c -o $(TARGET) -Wall -Wextra -pedantic -std=c99
+
+run:
+	./$(TARGET)
+clean:
+	rm -f $(TARGET)
